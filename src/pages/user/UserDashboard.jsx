@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllProductsApi } from "../../apis/Apis";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 const UserDashboard = () => {
   //to load all products
@@ -17,6 +18,7 @@ const UserDashboard = () => {
 
   return (
     <>
+       <Navbar />
       <div id="carouselExample" class="carousel slide mb-5">
         <div class="carousel-inner">
           <div class="carousel-item active">

@@ -47,8 +47,9 @@ const SendEmail = () => {
               <br />
               <input
                 onChange={changeEmail}
-                type="text"
-                name="mail"
+                type="email"
+                name="email"
+                id="email"
                 placeholder="Enter your mail"
                 className="w-100"
               />
