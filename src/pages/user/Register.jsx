@@ -1185,13 +1185,14 @@ const Register = () => {
       className="d-flex justify-content-center align-items-center vh-100"
       style={{ overflow: "hidden" }}
     >
-      
+
       <div className="h-100" style={{ width: "50%", marginRight: "10px" }}>
         <img
           src="/assets/images/Cover.jpg"
           alt="Cover Page"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
+   
       </div>
 
       <div style={{ width: "50%" }}>
