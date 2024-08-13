@@ -48,6 +48,7 @@ const UserDashboard = () => {
                 style={{ width: "100%", height: "450px", objectFit: "cover" }}
               />
             </div>
+            
           </div>
           <button
             className="carousel-control-prev"
