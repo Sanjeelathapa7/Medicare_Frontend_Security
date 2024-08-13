@@ -1304,7 +1304,7 @@ const Register = () => {
             </button>
           </form>
           <p className="mt-2" style={{ marginLeft: '10px', fontSize: '16px' }}>
-  Already have an account? <a href="/">Login</a>
+  Already have an account? <a href="/login">Login</a>
 </p>
 
 

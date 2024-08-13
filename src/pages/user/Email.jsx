@@ -24,7 +24,7 @@ const SendEmail = () => {
           toast.error(res.data.message);
         } else {
           toast.success(res.data.message);
-          navigate("/resetcode", { state: { User_email: email } });
+          navigate("/resetCode", { state: { User_email: email } });
         }
       })
       .catch((err) => {
@@ -36,40 +36,65 @@ const SendEmail = () => {
   return (
     <>
       <div className="row vh-100 d-flex align-items-center justify-content-center">
-        <div className="col-md-5 bg-white p-4 shadow">
-          <h1 className="display-6 text-center my-4">Forgot Your Password?</h1>
-          <form className="px-3">
-            <div className="mb-5 mt-3">
-              <label htmlFor="Email">
-                Please enter your email to search for your account.
-              </label>
-              <br />
-              <br />
-              <input
-                onChange={changeEmail}
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your mail"
-                className="w-100"
-              />
+        <div className="col-md-5 bg-white p-5">
+          <p className="text-center my-4 font-primary tw-text-blue tw-text-4xl">
+            <u>Forgot Password?</u>
+          </p>
+          <form
+            className="px-3"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p>Enter your email address to get a reset code</p>
+            <div className="tw-flex tw-items-center tw-mt-4">
+              <div className="tw-mb-4">
+                <b className="tw-text-blue tw-font-secondary tw-mt-5">
+                  Enter email address
+                </b>
+                <div className="tw-flex tw-items-center">
+                  <input
+                    className="tw-border-none tw-p-2 focus:tw-outline-none"
+                    onChange={changeEmail}
+                    style={{
+                      backgroundColor: "#F3F4F4",
+                      color: "#A8AAAA",
+                      border: "none",
+                      marginRight: "2px",
+                      padding: "3px 10px",
+                      width: "280px",
+                    }}
+                  />
+                  <div
+                    className="tw-bg-gray-100"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#F3F4F4",
+                      padding: "5px",
+                    }}
+                  >
+                    <img
+                      src="/assets/svg/mail.svg"
+                      style={{
+                        height: "20px",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <button
-              className="btn btn-success w-100"
+              className="btn btn-blue tw-text-sm tw-mt-3 font-primary"
               type="submit"
               onClick={handleSubmit}
             >
-              Reset
+              Send Code
             </button>
-            <div>
-              <Link
-                to="/login"
-                type="button"
-                className="btn btn-outline-success w-100 mt-3"
-              >
-                Back to Login
-              </Link>
-            </div>
           </form>
         </div>
       </div>

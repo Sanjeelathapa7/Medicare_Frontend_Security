@@ -60,7 +60,7 @@ const Profile = () => {
     //     const file = event.target.files[0];
     //     setProfileImage(file);
     //     setPreviewProfileImage(URL.createObjectURL(file));
-    // };   
+    // };
 
     return (
         <div className="d-flex flex-column align-items-center justify-content-center profile-page-container">
@@ -128,3 +128,4 @@ const Profile = () => {
 };
 
 export default Profile;
+

@@ -60,11 +60,12 @@ export const homepageApi = (data) => Api.post("/api/user/homepage", data)
 
 
 //for forget pass
-export const sendEmailApi = (data) => Api.post("/api/user/resetpassword", data);
+export const sendEmailApi = (data) =>
+  Api.post("/api/user/reset_password", data);
 export const verifyCodeApi = (data) =>
-  Api.post("/api/user/resetcode", data, config);
+  Api.post("/api/user/reset_code", data, config);
 export const updatePasswordApi = (data) =>
-  Api.post("/api/user/updatepassword", data);
+  Api.post("/api/user/update_password", data);
 
   //cart APIs
 export const createCartApi = (data) => Api.post("/api/user/create_cart", data);

@@ -4,82 +4,82 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 
 const UserDashboard = () => {
-  //to load all products
+  // to load all products
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+
   useEffect(() => {
     getAllProductsApi().then((res) => {
       setProducts(res.data.products);
     });
   }, []);
+
   const filteredProducts = products.filter((product) =>
     product.productName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <>
-       <Navbar />
-      <div id="carouselExample" class="carousel slide mb-5">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="/assets/images/1.png"
-              alt="al"
-              className="d-block w-100"
-              style={{ maxWidth: "auto", height: "500px" }}
-            />
+      <Navbar />
+      <div className="py-4">
+        <div id="carouselExample" className="carousel slide mb-5">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img
+                src="/assets/images/a.png"
+                alt="al"
+                className="d-block w-100"
+                style={{ width: "100%", height: "450px", objectFit: "cover" }}
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src="/assets/images/b.png"
+                alt="al"
+                className="d-block w-100"
+                style={{ width: "100%", height: "450px", objectFit: "cover" }}
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src="/assets/images/c.png"
+                alt="al"
+                className="d-block w-100"
+                style={{ width: "100%", height: "450px", objectFit: "cover" }}
+              />
+            </div>
           </div>
-          <div class="carousel-item">
-            <img
-              src="/assets/images/two.png"
-              alt="al"
-              className="d-block w-120"
-              style={{ maxWidth: "2100px", height: "500px" }}
-            />{" "}
-          </div>
-          <div class="carousel-item">
-            <img
-              src="/assets/images/3.png"
-              alt="al"
-              className="d-block w-100"
-              style={{ maxWidth: "auto", height: "500px" }}
-            />{" "}
-          </div>
-          <div class="carousel-item">
-            <img
-              src="/assets/images/4.png"
-              alt="al"
-              className="d-block w-90"
-              style={{ maxWidth: "1800px", height: "500px" }}
-            />{" "}
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/images/1.jpg" alt="al" className="d-block w-90" />{" "}
-          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+
       <div className="search-bar ms-5 ps-4 mb-4 w-50">
         <input
           type="text"
-          className="form-control "
+          className="form-control"
           placeholder="Search products..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
