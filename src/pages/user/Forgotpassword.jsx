@@ -10,6 +10,7 @@ const ForgotPasswordCode = () => {
 
   const userEmail = location.state && location.state.User_email;
 
+  
   const handleChangeCode = (e) => {
     setVerificationCode(e.target.value);
   };
