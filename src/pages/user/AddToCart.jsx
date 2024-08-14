@@ -6,6 +6,7 @@ import KhaltiCheckout from "khalti-checkout-web";
 import config from "../../components/khalti/khaltiConfig";
 import { deleteCartApi, getCartApi, orderCategory } from "../../apis/Apis";
 
+
 const AddToCart = ({ setCheckoutSuccess }) => {
   let checkout = new KhaltiCheckout(config);
 
