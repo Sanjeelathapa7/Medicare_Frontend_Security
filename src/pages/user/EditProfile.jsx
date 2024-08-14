@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { getUserProfileApi, updateUserProfileApi } from "../../apis/Apis";
 import { jwtDecode } from "jwt-decode";
 
+
 const EditProfile = () => {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
