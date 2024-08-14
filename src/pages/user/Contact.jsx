@@ -5,6 +5,7 @@ const Contact = () => {
     padding: 9rem 0 5rem 0;
     text-align: center;
  
+    
     .container {
       margin-top: 6rem;
  
