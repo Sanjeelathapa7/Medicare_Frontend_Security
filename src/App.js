@@ -39,6 +39,7 @@ import EditProfile from './pages/user/EditProfile';
 import AddToCart from './pages/user/AddToCart';
 import OrdersPage from './pages/user/Orders';
 import AddToFavorites from './pages/user/Favorite';
+import Home from './pages/user/Home';
 
 // import AdminRoutes from './pages/protected_routes/AdminRoutes';
 
@@ -71,6 +72,7 @@ function App() {
         <Route path="/user/orders" element={<OrdersPage />} />
         <Route path="/user/favorites" element={<AddToFavorites />} />
 
+        <Route path="/home" element={<Home />} />
 
 
 
