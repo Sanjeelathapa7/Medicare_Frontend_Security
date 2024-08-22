@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimatedText from '../../styles/Animated';
  
+
 const HomePage = () => {
   // get user data from local storage
   return (
