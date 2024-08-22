@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { sendEmailApi } from "../../apis/Apis";
 
+
 const SendEmail = () => {
   const [email, setEmail] = useState("");
 
